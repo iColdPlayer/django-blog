@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-
-{% load static %}
 {% block content %}
-{% load martortags %}
-<title>{% block title %} Blog | Developer ID{% endblock %}</title>
+{% load static %}
 
+{% load martortags %}
+
+<title>{% block title %} Blog | Developer ID{% endblock %}</title>
 
 <div class="card bg-dark text-white">
   <img src="{% static 'images/labs.jpg' %}" class="card-img" alt="...">
@@ -50,7 +50,7 @@
   </div>
 </div>
 
-
+<!--Bootstrap Card-->
 <div class="card-deck">
   <div class="card">
     <img src="{% static 'images/weather.png' %}" class="card-img-top" alt="...">
@@ -83,39 +83,42 @@
     </div>
   </div>
 </div>
-
 <br>
 
+<!--Blog Post Preview-->
 {% for post in posts %}
-<div class="card">
+  <div class="">
+  <div id="home1" class="card">
+    <div class="card-header">
+      {{post.title}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{post.description}}</h5>
+      <p class="card-text">{{post.content | safe_markdown | slice:150 }}</p><br>
+      <br>
+      <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+  </div>
+<br>
+{% endfor %}
+<br>
+{% for post in posts %}
+<div class="card text-center">
   <div class="card-header">
     {{post.title}}
   </div>
   <div class="card-body">
     <h5 class="card-title">{{post.description}}</h5>
-    <p class="card-text">{{post.content|safe_markdown|slice:"200"}}</p>
+    <p class="card-text">{{post.content | safe_markdown | slice:150 }}</p><br>
     <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-{% endfor %}
-
-
-<br>
-
-<div class="card text-center">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
   <div class="card-footer text-muted">
     2 days ago
   </div>
 </div>
-
-
+<br>
+{% endfor %}
+<br>
 
 {% endblock %}

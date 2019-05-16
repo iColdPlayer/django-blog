@@ -19,10 +19,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'iz=h1*$0&9(bqiew-8%agjo83u$5htuv%ivd1z+s*(^(^_bst*'
+"SECURITY WARNING: keep the secret key used in production secret!"
+
+SECRET_KEY = 'You can now define the secret key using randomg suggestions as you want'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
+# IF the debug set to False and and the requested page doesn't exist,
+# it will automatically triggered the 404.html and 500.html
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -45,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 
+"Markdown Installation Support"
 
 MARTOR_ENABLE_CONFIGS = {
     'imgur': 'false',
@@ -74,10 +79,10 @@ MARTOR_MARKDOWN_EXTENSIONS = [
 
     # Custom markdown extensions.
     'martor.extensions.urlize',
-    'martor.extensions.del_ins',    # ~~strikethrough~~ and ++underscores++
-    'martor.extensions.mention',    # to parse markdown mention
-    'martor.extensions.emoji',      # to parse markdown emoji
-    'martor.extensions.mdx_video',  # to parse embed/iframe video
+    'martor.extensions.del_ins',
+    'martor.extensions.mention',
+    'martor.extensions.emoji',
+    'martor.extensions.mdx_video',
 ]
 
 # Markdown Extensions Configs
@@ -90,7 +95,7 @@ MARTOR_SEARCH_USERS_URL = '/martor/search-user/' # default
 # Markdown Extensions
 # MARTOR_MARKDOWN_BASE_EMOJI_URL = 'https://www.webfx.com/tools/emoji-cheat-sheet/graphics/emojis/'     # from webfx
 # MARTOR_MARKDOWN_BASE_EMOJI_URL = 'https://github.githubassets.com/images/icons/emoji/'                  # default from github
-# MARTOR_MARKDOWN_BASE_MENTION_URL = 'https://python.web.id/author/'
+# MARTOR_MARKDOWN_BASE_MENTION_URL = 'https://dev.notnoob.com/author/'
 
 
 
@@ -172,9 +177,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'djangoApps/staticfiles/')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static/')
 
-# STATIC_ROOT = '/static/'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

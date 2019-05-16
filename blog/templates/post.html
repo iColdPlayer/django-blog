@@ -2,20 +2,17 @@
 
 
 {% load static %}
-{% load martortags %}
 {% block content %}
+{% load martortags %}
 
 <title>{% block title %} {{ post.title }}{% endblock %}</title>
 
-post detail
-<div>
-
+<div class="container">
    <h3>{{ post.title }}</h3>
    <h6>{{ post.description }}</h6>
    <p>
       {{ post.content |safe_markdown }}
    </p>
 </div>
-
 
 {% endblock %}

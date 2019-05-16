@@ -4,42 +4,32 @@
 {% load static  %}
 
 
-
-    <div class="jumbotron">
+{% load martortags %}
+<div class="jumbotron">
     <h1 class="display-4">Hello, World!</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
-  </div>
+      <p class="lead">This is an example site using Django, Markdown, and Bootstrap in it</p>
+      <hr class="my-4"><p>The site has been deployed to the cloud using Google Cloud, here's the <a href="https://notnoob.com">Demo</a> </p>
+      <p class="lead"><a class="btn btn-primary btn-lg" href="https://dev.notnoob.com" role="button">Documentation</a></p>
+</div>
 
-
-  <div class="">
+{% for post in posts %}
+<div class="">
   <div id="home1" class="card">
     <div class="card-header">
-      Featured
+      {{post.title}}
     </div>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{post.description}}</h5>
+      <p class="card-text">{{post.content | safe_markdown | slice:250 }}</p>
+       <br>
+      <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary">Read More</a>
     </div>
   </div>
-  </div>
+</div>
 <br>
-  <div class="card w-90">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.
-      With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content.
-        With supporting text below as a natural lead-in to additional content.
-        With supporting text below as a natural lead-in to additional content.
-      </p>
-      <a href="#" class="btn btn-primary">Button</a>
-    </div>
-  </div>
+{% endfor %}
+
+<br>
 
 
 {% endblock %}

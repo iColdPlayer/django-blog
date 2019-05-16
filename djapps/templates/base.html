@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<!--
+  Created by : iColdPlayer
+  For Open Distribution
+-->
 <html>
 <head>
 
@@ -20,18 +23,10 @@
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.min.css' %}" />
 
-
-  <!--Markdown Styling-->
-<!--
-  <link href="{% static 'plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'plugins/css/semantic.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'plugins/css/resizable.min.css' %}" type="text/css" media="all" rel="stylesheet" />
-  <link href="{% static 'martor/css/martor.min.css' %}" type="text/css" media="all" rel="stylesheet" />
--->
-
-
-
 </head>
+
+
+
 <body>
 <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'HomeIndex' %}"><b>noTnoob</b></a>
@@ -60,7 +55,7 @@
           <a class="dropdown-item" href="#">Technology</a>
           <a class="dropdown-item" href="#">News</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Other</a>
+          <a class="dropdown-item" href="https://dev.notnoob.com"><button class="btn btn-outline-danger">Documentation</button></a>
         </div>
       </li>
 <!--      <li class="nav-item">
@@ -183,7 +178,7 @@
       <h5 class="mb-1">Register for free</h5>
     </li>
     <li class="list-inline-item">
-      <a href="{% url 'Register' %}" class="btn btn-danger btn-rounded">Sign up!</a>
+      <a href="{% url 'Register' %}" class="btn btn-danger btn-rounded">Sign up now!</a>
     </li>
   </ul>
   <!-- Call to action -->
@@ -225,36 +220,15 @@
      <a href="https://dev.notnoob.com">iColdPlayer</a>
   </div>
   <!-- Copyright -->
-
 </footer>
 <!-- Footer -->
 
-
-
-
-</body>
 			<script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
 			<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
 			<script src="{% static 'assets/js/bootstrap.js' %}"></script>
 			<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 
-<!--      &lt;!&ndash;Markdown Styling&ndash;&gt;
-      <script type="text/javascript" src="{% static 'plugins/js/ace.js' %}"></script>
-      <script type="text/javascript" src="{% static 'plugins/js/semantic.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'plugins/js/mode-markdown.js' %}"></script>
-      <script type="text/javascript" src="{% static 'plugins/js/ext-language_tools.js' %}"></script>
-      <script type="text/javascript" src="{% static 'plugins/js/theme-github.js' %}"></script>
 
-      <script type="text/javascript" src="{% static 'plugins/js/resizable.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'plugins/js/emojis.min.js' %}"></script>
-      <script type="text/javascript" src="{% static 'martor/js/martor.min.js' %}"></script>-->
+</body>
 
-  <script type="text/javascript" src="{% static 'plugins/js/semantic.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'plugins/js/highlight.min.js' %}"></script>
-  <script>
-    $('pre').each(function(i, block){
-        hljs.highlightBlock(block);
-    });
-    $('.ui.dropdown').dropdown();
-  </script>
 </html>
