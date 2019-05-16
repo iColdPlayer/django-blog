@@ -43,7 +43,7 @@ Please feel free to fork or clone to your own repository and pull request or ope
 `git clone https://github.com/iColdPlayer/DjangoProjects.git your-folder-name`
 - since the dependencies are in virtual environment, 
 you need to activate it first from `env` folder. Now go to `your-filder-name` and type:<br>
-`./manage.py runserver` or `python manage.py runserver`
+    - `./manage.py runserver` or `python manage.py runserver`
 - I've added *usename*: `admin`, and the *password* `admin` by default.
 - And you're ready to go. Please feel free to open an issue or pull request.
 
@@ -53,6 +53,7 @@ And what's next?.
 - Handle registration forms.
 - User management in `accounts` apps.
 - Push message from contact to our email.
+- Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
 
 -------------------
 

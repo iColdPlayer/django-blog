@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bad99a2-8ce8-4c25-ad02-0bf1c3d31413" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djapps/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djapps/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/djapps/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djapps/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djapps/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,8 +71,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="319">
-                <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+              <first_editor relative-caret-position="455">
+                <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
               </first_editor>
               <second_editor />
             </state>
@@ -342,8 +330,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="319">
-            <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <first_editor relative-caret-position="455">
+            <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
           </first_editor>
           <second_editor />
         </state>
