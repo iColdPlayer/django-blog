@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% load martortags %}
+{% block content %}
+
+<title>{% block title %} {{ post.title }}{% endblock %}</title>
+
+post detail
+<div>
+
+   <h3>{{ post.title }}</h3>
+   <h6>{{ post.description }}</h6>
+   <p>
+      {{ post.content |safe_markdown }}
+   </p>
+</div>
+
+
+{% endblock %}

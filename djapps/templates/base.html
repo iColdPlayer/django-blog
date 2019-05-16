@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+   {% load static %}
+    {% load martortags %}
+   <title>{% block title %}Developer ID{% endblock %}</title>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap-grid.css' %}" />
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap-grid.min.css' %}" />
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.css' %}" />
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.min.css' %}" />
+
+
+  <!--Markdown Styling-->
+<!--
+  <link href="{% static 'plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <link href="{% static 'plugins/css/semantic.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <link href="{% static 'plugins/css/resizable.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+  <link href="{% static 'martor/css/martor.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+-->
+
+
+
+</head>
+<body>
+<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'HomeIndex' %}"><b>noTnoob</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+   </form>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'BlogIndex' %}">Blog <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'About' %}">About<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Technology</a>
+          <a class="dropdown-item" href="#">News</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Other</a>
+        </div>
+      </li>
+<!--      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>-->
+
+    </ul>
+
+    <a href="{% url 'Login' %}"><button type="button" class="btn btn-outline-secondary">Login</button></a>
+         &nbsp;
+         &nbsp;
+    <a href="{% url 'Register' %}"><button type="button" class="btn btn-primary">Register</button></a>
+
+  </div>
+</nav>
+
+
+<div>
+   <br>
+   <br>
+   <br>
+</div>
+
+
+
+
+<div class="container">
+      {% block content %}
+      {% endblock %}
+</div>
+
+<br>
+
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+          consectetur
+          adipisicing elit.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a href="{% url 'Register' %}" class="btn btn-danger btn-rounded">Sign up!</a>
+    </li>
+  </ul>
+  <!-- Call to action -->
+
+  <hr>
+
+  <!-- Social buttons -->
+  <ul class="list-unstyled list-inline text-center">
+    <li class="list-inline-item">
+      <a class="btn-floating btn-fb mx-1">
+        <i class="fab fa-facebook-f"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-tw mx-1">
+        <i class="fab fa-twitter"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-gplus mx-1">
+        <i class="fab fa-google-plus-g"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-li mx-1">
+        <i class="fab fa-linkedin-in"> </i>
+      </a>
+    </li>
+    <li class="list-inline-item">
+      <a class="btn-floating btn-dribbble mx-1">
+        <i class="fab fa-dribbble"> </i>
+      </a>
+    </li>
+  </ul>
+  <!-- Social buttons -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+     <a href="https://dev.notnoob.com">iColdPlayer</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+</body>
+			<script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+			<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+			<script src="{% static 'assets/js/bootstrap.js' %}"></script>
+			<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+<!--      &lt;!&ndash;Markdown Styling&ndash;&gt;
+      <script type="text/javascript" src="{% static 'plugins/js/ace.js' %}"></script>
+      <script type="text/javascript" src="{% static 'plugins/js/semantic.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'plugins/js/mode-markdown.js' %}"></script>
+      <script type="text/javascript" src="{% static 'plugins/js/ext-language_tools.js' %}"></script>
+      <script type="text/javascript" src="{% static 'plugins/js/theme-github.js' %}"></script>
+
+      <script type="text/javascript" src="{% static 'plugins/js/resizable.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'plugins/js/emojis.min.js' %}"></script>
+      <script type="text/javascript" src="{% static 'martor/js/martor.min.js' %}"></script>-->
+
+  <script type="text/javascript" src="{% static 'plugins/js/semantic.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'plugins/js/highlight.min.js' %}"></script>
+  <script>
+    $('pre').each(function(i, block){
+        hljs.highlightBlock(block);
+    });
+    $('.ui.dropdown').dropdown();
+  </script>
+</html>

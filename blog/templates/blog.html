@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block content %}
+{% load martortags %}
+<title>{% block title %} Blog | Developer ID{% endblock %}</title>
+
+
+<div class="card bg-dark text-white">
+  <img src="{% static 'images/labs.jpg' %}" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text" style="color:black"><b>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</b></p>
+    <p class="card-text">Last updated 3 mins ago</p>
+  </div>
+</div>
+<br>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card bg-light mb-3" style="max-width: 22rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Light card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card text-white bg-info mb-3" style="max-width: 22rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h5 class="card-title">Info card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card border-success mb-3" style="max-width: 22rem;">
+        <div class="card-header">Header</div>
+        <div class="card-body text-success">
+          <h5 class="card-title">Success card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card-deck">
+  <div class="card">
+    <img src="{% static 'images/weather.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/labs.jpg' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/weather.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+
+<br>
+
+{% for post in posts %}
+<div class="card">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.description}}</h5>
+    <p class="card-text">{{post.content|safe_markdown|slice:"200"}}</p>
+    <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}
+
+
+<br>
+
+<div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+
+
+{% endblock %}
