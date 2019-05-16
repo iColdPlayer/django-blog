@@ -70,8 +70,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="217">
-                <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+              <first_editor relative-caret-position="336">
+                <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
               </first_editor>
               <second_editor />
             </state>
@@ -135,6 +135,17 @@
             <path>
               <item name="DJ" type="b2602c69:ProjectViewProjectNode" />
               <item name="DJ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DJ" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DJ" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DJ" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,8 +336,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="217">
-            <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+          <first_editor relative-caret-position="336">
+            <caret line="97" column="37" lean-forward="true" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
           </first_editor>
           <second_editor />
         </state>

@@ -20,23 +20,28 @@ This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
 
 <br>
 
+###### Blog Page
+![Post](static/images/Post.png)
+
+<br>
+
 ###### Login Page
 ![login](static/images/login.png)
 
 <br>
 
-###### Login Page
+###### Register as employee
 ![employee](static/images/register-as-employee.png)
 
 <br>
 
-###### Login Page
+#### Register as hirer
 ![employer](static/images/register-as-employer.png)
 
 
 <br>
 
-###### Login Page
+#### Contact Us
 ![login](static/images/contact-us.png)
 
 <br>
@@ -87,14 +92,14 @@ you need to activate it first from `env` folder. Now go to `your-filder-name` an
 - And you're ready to go. Please feel free to open an issue or pull request.
 
 
-And what's next?.
+#### And what's next?.
 - Handle request from login page.
 - Handle registration forms.
 - User management in `accounts` apps.
 - Push message from contact to our email.
+- Inserting Disqus comments for each posts.
 - Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
-
-
+- Users direct messages.
 
 -------------------
 
