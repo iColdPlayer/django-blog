@@ -101,6 +101,10 @@ you need to activate it first from `env` folder. Now go to `your-filder-name` an
 - Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
 - Users direct messages.
 
+
+**Note**:
+- [Github Markdown Tutorials](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [Documentation 1](https://github.com/markedjs/marked), [Documentations 2](https://github.com/agusmakmun/django-markdown-editor)
+- [Django Tutorials](https://docs.djangoproject.com)
 -------------------
 
 Copyright : [iColdPlayer](https://dev.notnoob.com)
