@@ -63,6 +63,7 @@ Styling:
 ```
 Bootstrap 4.*
 JavaScript
+Font Awesome 4.*
 ```
 
 Support:

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3bad99a2-8ce8-4c25-ad02-0bf1c3d31413" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +70,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="234">
-                <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+              <first_editor relative-caret-position="217">
+                <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               </first_editor>
               <second_editor />
             </state>
@@ -326,8 +325,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="234">
-            <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+          <first_editor relative-caret-position="217">
+            <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           </first_editor>
           <second_editor />
         </state>
