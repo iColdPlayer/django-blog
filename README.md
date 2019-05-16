@@ -5,7 +5,43 @@
 This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
 
 
-###### Dependencies:
+#### Screenshot
+
+----------
+###### Homepage
+
+![homepage](static/images/homepage.png)
+
+
+<br>
+
+###### Blog Page
+![blog-page](static/images/blog-page.png)
+
+<br>
+
+###### Login Page
+![login](static/images/login.png)
+
+<br>
+
+###### Login Page
+![employee](static/images/register-as-employee.png)
+
+<br>
+
+###### Login Page
+![employer](static/images/register-as-employer.png)
+
+
+<br>
+
+###### Login Page
+![login](static/images/contact-us.png)
+
+<br>
+
+#### Dependencies:
 Packages:
 ```
 Package    Version 
@@ -45,6 +81,8 @@ Please feel free to fork or clone to your own repository and pull request or ope
 you need to activate it first from `env` folder. Now go to `your-filder-name` and type:<br>
     - `./manage.py runserver` or `python manage.py runserver`
 - I've added *usename*: `admin`, and the *password* `admin` by default.
+- Or, you can create your own username:
+    - `./manage.py createsuperuser` and enter your additional informations and login from `lodalhost:8000/admin`.
 - And you're ready to go. Please feel free to open an issue or pull request.
 
 
@@ -54,6 +92,8 @@ And what's next?.
 - User management in `accounts` apps.
 - Push message from contact to our email.
 - Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
+
+
 
 -------------------
 
