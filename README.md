@@ -8,29 +8,29 @@ This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
 #### Screenshot
 
 ----------
-###### Homepage
+#### Homepage
 
 ![homepage](static/images/homepage.png)
 
 
 <br>
 
-###### Blog Page
+#### Blog Page
 ![blog-page](static/images/blog-page.png)
 
 <br>
 
-###### Blog Page
+#### Blog Page
 ![Post](static/images/Post.png)
 
 <br>
 
-###### Login Page
+#### Login Page
 ![login](static/images/login.png)
 
 <br>
 
-###### Register as employee
+#### Register as employee
 ![employee](static/images/register-as-employee.png)
 
 <br>
