@@ -30,7 +30,9 @@ SECRET_KEY = 'You can now define the secret key using randomg suggestions as you
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_REDIRECT_URL = '/accounts'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = 'Login'
 
 # Application definition
 
@@ -43,9 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'blog',
-    'accounts',
+    'accounts.apps.AccountsConfig',
     'contact',
+
+
     'martor',
+    'crispy_forms',
 ]
 
 
@@ -185,3 +190,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '/static/'
 ]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

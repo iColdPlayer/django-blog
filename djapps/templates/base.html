@@ -28,15 +28,15 @@
 
 
 <body>
-<nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
+<nav class="fixed-top navbar navbar-expand-sm navbar-light bg-light">
   <a class="navbar-brand" href="{% url 'HomeIndex' %}"><b>noTnoob</b></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control mr-sm-2 btn-sm" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 btn-sm" type="submit">Search</button>
    </form>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,67 +55,62 @@
           <a class="dropdown-item" href="#">Technology</a>
           <a class="dropdown-item" href="#">News</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="https://dev.notnoob.com"><button class="btn btn-outline-danger">Documentation</button></a>
+          <a class="dropdown-item" href="https://dev.notnoob.com"><button class="btn btn-outline-danger btn-sm">Documentation</button></a>
         </div>
       </li>
-<!--      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>-->
-
     </ul>
-
-    <a href="{% url 'Login' %}"><button type="button" class="btn btn-outline-secondary">Login</button></a>
-         &nbsp;
-         &nbsp;
-    <a href="{% url 'Register' %}"><button type="button" class="btn btn-primary">Register</button></a>
-
+    <div>
+      {% if user.is_authenticated %}
+        <a href="{% url 'Account' %}" class="btn btn-light btn-sm">Account</a>
+        &nbsp;
+        <a href="{% url 'Logout' %}" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">Logout</a>
+      {% else %}
+        <a href="{% url 'Login' %}" class="btn btn-light btn-sm" role="button" aria-pressed="true">Login</a>
+        &nbsp;
+        <a href="{% url 'Register' %}" class="btn btn-success btn-sm" role="button" aria-pressed="true">Register</a>
+      {% endif %}
+    </div>
   </div>
 </nav>
-
-
 <div>
    <br>
    <br>
    <br>
 </div>
-
-
-
-
-<div class="container">
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+      {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+        {% endfor %}
+      {% endif %}
       {% block content %}
       {% endblock %}
+  </div>
+  <div class="col-2"></div>
 </div>
-
 <br>
-
-
 <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4">
-
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
-
     <!-- Grid row -->
     <div class="row">
-
       <!-- Grid column -->
       <div class="col-md-4 mx-auto">
-
         <!-- Content -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
         <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
           consectetur
           adipisicing elit.</p>
-
       </div>
       <!-- Grid column -->
-
       <hr class="clearfix w-100 d-md-none">
-
       <!-- Grid column -->
       <div class="col-md-2 mx-auto">
-
         <!-- Links -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
 
@@ -133,7 +128,6 @@
             <a href="#!">Link 4</a>
           </li>
         </ul>
-
       </div>
       <!-- Grid column -->
 
@@ -172,19 +166,20 @@
 
   <hr>
 
+{% if user.is_authenticated %}
+
+
+  {% else %}
   <!-- Call to action -->
   <ul class="list-unstyled list-inline text-center py-2">
     <li class="list-inline-item">
       <h5 class="mb-1">Register for free</h5>
     </li>
     <li class="list-inline-item">
-      <a href="{% url 'Register' %}" class="btn btn-danger btn-rounded">Sign up now!</a>
+      <a href="{% url 'Register' %}" class="btn btn-danger btn-rounded btn-sm">Sign up now!</a>
     </li>
   </ul>
-  <!-- Call to action -->
-
-  <hr>
-
+{% endif %}
   <!-- Social buttons -->
   <ul class="list-unstyled list-inline text-center">
     <li class="list-inline-item">

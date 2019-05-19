@@ -22,7 +22,7 @@
       <h5 class="card-title">{{post.description}}</h5>
       <p class="card-text">{{post.content | safe_markdown | slice:250 }}</p>
        <br>
-      <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary">Read More</a>
+      <a href="{% url 'PostDetail' post.slug %}" class="btn btn-primary btn-sm">Read More</a>
     </div>
   </div>
 </div>

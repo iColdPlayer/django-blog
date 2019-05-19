@@ -1,15 +1,45 @@
 {% extends "base.html" %}
 
-{% block content %}
-   <title>{% block title %} Login | Developer ID {% endblock %}</title>
+{% load crispy_forms_tags %}
 {% load static  %}
-<head>
-      <link rel="stylesheet" href="{% static 'assets/css/login.css' %}">
-</head>
+{% block content %}
+<title>{% block title %} Login | Developer ID {% endblock %}</title>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+        <h2>Login</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Welcome</legend>
+            {{ form|crispy }}
+          </fieldset>
+          <div class="form-group">
+            <button class="btn btn-outline-primary btn-sm" type="submit">Login</button>
+          </div>
+      </form>
+      <div class="border-top pt-3">
+        <small class="text-muted">
+          Don't have an account? <a href="{% url 'Register' %}">Register Now!</a>
+        </small>
+      </div>
+  </div>
+  <div class="col-2"></div>
+</div>
 
 
-<body>
-  <div class="container">
+
+<!--
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>
+-->
+
+
+<!--  <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
@@ -40,6 +70,6 @@
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </div>-->
+
 {% endblock %}
