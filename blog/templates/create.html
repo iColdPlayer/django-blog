@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static  %}
+{% load martortags %}
+{% block content %}
+<title>{% block title %} New Post | Developer ID {% endblock %}</title>
+   <div class="container">
+       <h2>Create New Post</h2>
+         <form method="post">
+            {% csrf_token %}
+             <fieldset class="form-group">
+               <legend class="border-bottom mb-4">New Post</legend>
+             </fieldset>
+            {{ form|crispy|safe_markdown }}
+             <div class="form-group">
+               <button class="btn btn-outline-primary btn-sm" type="submit">Publish</button>
+             </div>
+         </form>
+   </div>
+{% endblock %}

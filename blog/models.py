@@ -21,3 +21,21 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class UserPost(models.Model):
+    author = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, blank=False, unique=True)
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=200, blank=False)
+    content = models.TextField()
+    created = models.DateTimeField(default=timezone.now)
+    updated = models.DateTimeField(auto_now=True)
+
+    def publish(self):
+        self.publish_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
+

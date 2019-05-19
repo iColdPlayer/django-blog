@@ -5,32 +5,68 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <title>{% block title %} Accounts | Developer ID {% endblock %}</title>
-
-<div class="row">
-  <div class="col-1"></div>
-  <div class="col-10">
-      <div class="content-section">
-         <div class="media">
-            <img class="img-thumbnail" src="{{user.profile.picture.url}}">
-            <div class="media-body">
-               <h2 class="account-heading">{{ user.username }}</h2>
-               <p class="text-secondary">{{ user.email }}</p>
-            </div>
-            <form method="post">
-              {% csrf_token %}
-                <fieldset class="form-group">
-                  <legend class="border-bottom mb-4">Profile Info</legend>
-                   {{ user_form|crispy }}
-                   {{ profile_form|crispy }}
-                </fieldset>
-                <div class="form-group">
-                  <button class="btn btn-outline-primary btn-sm" type="submit">Submit Change</button>
+<div class="container">
+    <div class="span3 well">
+       <center>
+          <div class="img-circle">
+             <img src="{{user.profile.picture.url}}" name="aboutme" width="140" height="140" class="img-circle">
+          </div>
+          <br>
+          <a href="#aboutModal" data-toggle="modal" data-target="#myModal" class="btn btn-outline-light btn-sm">Change Profile</a>
+          <h3>Username : {{user.username}}</h3>
+          <h6>Email : {{ user.email }}</h6>
+       </center>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <a class="modal-title" id="myModalLabel">
+                       <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                    </a>
+                    </div>
+                <div class="modal-body">
+                    <center>
+                    <img src="{{user.profile.picture.url}}" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+                    <h3 class="media-heading">{{user.username}}<small> | Greater area : Jakarta</small></h3>
+                    <span><strong>Skills: </strong></span>
+                       Python,
+                       Django,
+                       JavaScript,
+                       HTML / CSS / Bootstrap,
+                       Linux,
+                       MongoDB,
+                       PostgreSQL,
+                       SQL/ite,
+                       CCTV ACS DVR / NVR.
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>Bio: </strong><br>
+                       <form method="post" enctype="multipart/form-data">
+                          {% csrf_token %}
+                            <fieldset class="form-group">
+                              <legend class="border-bottom mb-4">Profile Info</legend>
+                               {{ user_form|crispy }}
+                               {{ profile_form|crispy }}
+                            </fieldset>
+                            <div class="form-group">
+                              <button class="btn btn-outline-primary btn-sm" type="submit">Submit Change</button>
+                            </div>
+                       </form>
+                    <br>
+                    </center>
                 </div>
-            </form>
-         </div>
-      </div>
-  </div>
-  <div class="col-1"></div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}

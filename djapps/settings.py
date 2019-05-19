@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 "SECURITY WARNING: keep the secret key used in production secret!"
 
-SECRET_KEY = 'You can now define the secret key using randomg suggestions as you want'
+SECRET_KEY = 'You can now define the secret key using random suggestions as you want'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -30,9 +30,8 @@ SECRET_KEY = 'You can now define the secret key using randomg suggestions as you
 DEBUG = True
 
 ALLOWED_HOSTS = []
-LOGIN_REDIRECT_URL = '/accounts'
-LOGOUT_REDIRECT_URL = '/'
-LOGIN_URL = 'Login'
+
+
 
 # Application definition
 
@@ -196,3 +195,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+LOGIN_REDIRECT_URL = '/accounts'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = 'Login'
+
+
+"Email Form Handle"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

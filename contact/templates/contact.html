@@ -1,35 +1,29 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<title>{% block title %} Contact Us | Developer Blog {% endblock %}</title>
+<title>{% block title %} Contact Us | Developer ID {% endblock %}</title>
 
 
-<div class="container">
-   <h3 class="text-center">Contact Us </h3>
-   <div class="">
-   </div>
-   <form>
-   <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
-   </div>
-   <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-   </div>
-   <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-   </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-8">
+        <h2>Send us an email</h2>
+      <form method="post">
+        {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Please input your messages here</legend>
+            {{ form|crispy }}
+          </fieldset>
+          <div class="form-group">
+            <button class="btn btn-outline-primary btn-sm" type="submit">Submit</button>
+          </div>
+      </form>
+  </div>
+  <div class="col-2"></div>
 </div>
 
 
