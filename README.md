@@ -1,8 +1,9 @@
 ## Django Project 
 
-#### For Public Distribution
+#### For Public Distribution and Practice.
 
 This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
+
 
 
 #### Screenshot
@@ -20,24 +21,13 @@ This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
 
 <br>
 
-#### Blog Page
+#### Post Page
 ![Post](static/images/Post.png)
 
 <br>
 
 #### Login Page
 ![login](static/images/login.png)
-
-<br>
-
-#### Register as employee
-![employee](static/images/register-as-employee.png)
-
-<br>
-
-#### Register as hirer
-![employer](static/images/register-as-employer.png)
-
 
 <br>
 
@@ -93,14 +83,15 @@ you need to activate it first from `env` folder. Now go to `your-filder-name` an
 
 
 #### And what's next?.
-- Handle request from login page.
-- Handle registration forms.
-- User management in `accounts` apps.
-- Push message from contact to our email.
-- Inserting Disqus comments for each posts.
-- Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
-- Users direct messages.
-
+* [x] Handle request from login page.
+* [x] Handle registration forms.
+* [x] User account
+* [ ] User management in `accounts` apps.
+* [ ] Push message from contact to our email.
+* [ ] Inserting Disqus comments for each posts.
+* [ ] Users direct messages /  push email.
+* [ ] Login using multiple authentications
+* [ ] Deploy on Google App Engine (Flexible Environment). Already deployed. See the demo [here](https://notnoob.com).
 
 **Note**:
 - [Github Markdown Tutorials](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), [Documentation 1](https://github.com/markedjs/marked), [Documentations 2](https://github.com/agusmakmun/django-markdown-editor)
