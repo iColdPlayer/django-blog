@@ -86,7 +86,7 @@ you need to activate it first from `env` folder. Now go to `your-filder-name` an
 * [x] Handle request from login page.
 * [x] Handle registration forms.
 * [x] User account
-* [ ] User management in `accounts` apps.
+* [ ] User management in account page.
 * [ ] Push message from contact to our email.
 * [ ] Inserting Disqus comments for each posts.
 * [ ] Users direct messages /  push email.
