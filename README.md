@@ -39,26 +39,29 @@ This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
 #### Dependencies:
 Packages:
 ```
-Package    Version 
----------- --------
-certifi    2019.3.9
-chardet    3.0.4   
-Django     2.2.1   
-idna       2.8     
-Markdown   3.1     
-martor     1.4.0   
-pip        19.1.1  
-pytz       2019.1  
-requests   2.21.0  
-setuptools 39.0.1  
-sqlparse   0.3.0   
-urllib3    1.24.3  
+Package             Version 
+------------------- --------
+certifi             2019.3.9
+chardet             3.0.4   
+Django              2.2.1   
+django-crispy-forms 1.7.2   
+idna                2.8     
+Markdown            3.1     
+martor              1.4.0   
+Pillow              6.0.0   
+pip                 19.1.1  
+pytz                2019.1  
+requests            2.21.0  
+setuptools          39.0.1  
+sqlparse            0.3.0   
+urllib3             1.24.3  
 ```
 Styling:
 ```
 Bootstrap 4.*
 JavaScript
 Font Awesome 4.*
+Crispy-Forms
 ```
 
 Support:
@@ -86,8 +89,8 @@ you need to activate it first from `env` folder. Now go to `your-filder-name` an
 * [x] Handle request from login page.
 * [x] Handle registration forms.
 * [x] User account
-* [ ] User management in account page.
-* [ ] Push message from contact to our email.
+* [x] User management in account page.
+* [x] Push message from contact to our email. (development mode)
 * [ ] Inserting Disqus comments for each posts.
 * [ ] Users direct messages /  push email.
 * [ ] Login using multiple authentications
