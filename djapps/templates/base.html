@@ -5,27 +5,21 @@
 -->
 <html>
 <head>
-
    {% load static %}
     {% load martortags %}
    <title>{% block title %}Developer ID{% endblock %}</title>
-
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
-
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-grid.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-grid.min.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.css' %}" />
    <link rel="stylesheet" href="{% static 'assets/css/bootstrap-reboot.min.css' %}" />
-
 </head>
-
-
 
 <body>
 <nav class="fixed-top navbar navbar-expand-sm navbar-light bg-light">
@@ -33,12 +27,10 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
    <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2 btn-sm" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0 btn-sm" type="submit">Search</button>
    </form>
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -113,7 +105,6 @@
       <div class="col-md-2 mx-auto">
         <!-- Links -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
         <ul class="list-unstyled">
           <li>
             <a href="#!">Link 1</a>
@@ -130,15 +121,11 @@
         </ul>
       </div>
       <!-- Grid column -->
-
       <hr class="clearfix w-100 d-md-none">
-
       <!-- Grid column -->
       <div class="col-md-2 mx-auto">
-
         <!-- Links -->
         <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
         <ul class="list-unstyled">
           <li>
             <a href="#!">Link 1</a>
@@ -153,22 +140,15 @@
             <a href="#!">Link 4</a>
           </li>
         </ul>
-
       </div>
-
       <!-- Grid column -->
-
     </div>
     <!-- Grid row -->
-
   </div>
   <!-- Footer Links -->
-
   <hr>
 
 {% if user.is_authenticated %}
-
-
   {% else %}
   <!-- Call to action -->
   <ul class="list-unstyled list-inline text-center py-2">

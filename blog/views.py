@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, CreateView
 from blog.models import Post, UserPost
 
@@ -24,7 +25,9 @@ def PostDetail(request, slug):
     }
     return render(request, 'post.html', context)
 
+
+
 class PostCreate(CreateView):
     model = UserPost
-    fields = ['title', 'description', 'author', 'content', 'created']
+    fields = ['title', 'description', 'content', 'created']
     template_name = 'create.html'
