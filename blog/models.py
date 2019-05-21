@@ -1,6 +1,8 @@
+import uuid
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 from martor.models import MartorField
 
 
@@ -25,8 +27,8 @@ class Post(models.Model):
 
 class UserPost(models.Model):
     author = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, blank=False, unique=True)
     title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=100, blank=False, unique=True)
     description = models.CharField(max_length=200, blank=False)
     content = models.TextField()
     created = models.DateTimeField(default=timezone.now)
@@ -39,3 +41,5 @@ class UserPost(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('PostDetail', kwargs={'slug': self.slug})
