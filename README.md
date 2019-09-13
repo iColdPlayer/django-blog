@@ -2,8 +2,9 @@
 
 #### For Public Distribution and Practice.
 
-This made with [Django2.2](https://docs.djangoproject.com) and bootstrap.
+This made with [Django2.2](https://docs.djangoproject.com), [bootstrap](getbootstrap.com), and [markdown](https://www.markdownguide.org/).
 
+#### See the [Installation](/usage.md) detail.
 
 
 #### Screenshot
